@@ -58,6 +58,10 @@ async def help(ctx):
 
 
     ".degi" -> some random reply from audrey bitoni
+
+
+    ".clear a" -> 'a' is an integer
+                it deletes last 'a' messages from chat
     '''
     embed.set_author(name='help')
     embed.add_field(name="Hello There!!",value=st,inline=False)
