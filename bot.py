@@ -31,8 +31,9 @@ async def link(ctx,arg1=None,arg2=1):
 
 @client.command()
 async def clear(ctx,amount=5):
-    if ctx.message.author != client.user:
-        return
+    print(ctx.message.author.name)
+    # if ctx.message.author != client.user:
+    #     return
     await ctx.channel.purge(limit=amount)
 
 
@@ -62,6 +63,8 @@ async def help(ctx):
 
     ".clear a" -> 'a' is an integer
                 it deletes last 'a' messages from chat
+
+    DESCLAIMER-> gaali mt dena agr bezti ni krani to
     '''
     embed.set_author(name='help')
     embed.add_field(name="Hello There!!",value=st,inline=False)
@@ -70,6 +73,8 @@ async def help(ctx):
 
 @client.event
 async def on_message(message):
+    if message.author.name == 'Miss_Mooooo':
+        return
     gali = ["Maderchod","Bhosadike","Bhen chod","Beti chod","bhadve","Chutiya",
     "Gaandu","lawde","landoore","choot ke bhoot","lavde ke baal","jhaat si sakal ke",
     "sadi hui gaand","randii","gend deti rend","chamak-landoore","chamkeele gaand","bhosdu-nandan",""]
