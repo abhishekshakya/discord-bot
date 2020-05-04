@@ -4,6 +4,7 @@ from phlib import PornHub
 import random
 import json
 import requests
+import os
 ph = PornHub()
 
 client = commands.Bot(command_prefix = '.',description="Hello there!! I'm Audrey Bitoni")
@@ -210,8 +211,5 @@ async def me_ghissu(ctx):
 
 
 
-with open('config.json','r') as openfile:
-    tt = json.load(openfile)
-    
-token = tt['token']+""
-client.run(token)
+
+client.run(os.environ['token'])#for heruku
