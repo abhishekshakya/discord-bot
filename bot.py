@@ -202,7 +202,7 @@ async def poblem(ctx,tag1=None,tag2=None):
 @client.command()
 async def me_ghissu(ctx):
     name = ctx.message.author
-    url = 'https://github.com/abhishekshakya?tab=repositories'
+    url = 'https://github.com/abhishekshakya/discord-bot'
     s = f"ye le code ghissu\n{url}"
     await ctx.channel.send(s)
 
@@ -211,6 +211,7 @@ async def me_ghissu(ctx):
 
 
 with open('config.json','r') as openfile:
-    token = json.load(openfile)
-token = token['token']
+    tt = json.load(openfile)
+    
+token = tt['token']+""
 client.run(token)
