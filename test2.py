@@ -6,7 +6,7 @@ ph = PornHub()
 a = ph.categories
 st = '''here are all the commands
     **example**           **description**
-    **.help**         -> *to open this message*
+    **.help**          -> *to open this message*
     **.link**          -> *gives random porn link*
     **.link keyword**  -> *keyword should be separated by '-'(dash) not ' '(space)*
     **.degi**          -> *some random reply from audrey bitoni*
@@ -19,7 +19,7 @@ st = '''here are all the commands
     **.poblem dp**     -> *gives problem from tag dp (level A,B,C)*
     **.poblem dp E**   -> *gives level E problem from tag dp*
     **.tags**          -> *gives tag that has to used in .poblem*
-    **.me_ghissu**    -> *github code*
+    **.me_ghissu**     -> *github code*
     **DESCLAIMER - gaali mt dena agr bezti ni krani to**
     '''
 print(len(st))
