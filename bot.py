@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from phlib import PornHub
 import random
+import json
 import requests
 ph = PornHub()
 
@@ -205,4 +206,11 @@ async def me_ghissu(ctx):
     s = f"ye le code ghissu\n{url}"
     await ctx.channel.send(s)
 
-client.run('NzA2NDY5MTEzOTI0NjgxNzQ5.Xq7tLQ.7dzpIKx1jPK7ZTHj-rNb7ehoR1o')
+
+
+
+
+with open('config.json','r') as openfile:
+    token = json.load(openfile)
+token = token['token']
+client.run(token)
