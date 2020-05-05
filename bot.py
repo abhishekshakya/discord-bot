@@ -88,8 +88,8 @@ async def on_message(message):
     # print(test[0])
     gali = ["Maderchod","Bhosadike","Bhen chod","Beti chod","bhadve","Chutiya",
     "Gaandu","lawde","landoore","choot ke bhoot","lavde ke baal","jhaat si sakal ke",
-    "sadi hui gaand","randii","gend deti rend","chamak-landoore","chamkeele gaand","bhosdu-nandan",""]
-    gali2 = ["chod","BC","bsdk","chut","gand","gaand","dalle","daale","choot","randi","rande","gend","saale","bhadv","bhadw","lavd","lawd","lund","chooch"]
+    "sadi hui gaand","randii","gend deti rend","chamak-landoore","chamkeele gaand","bhosdu-nandan"]
+    gali2 = ["BC","bsdk","chut","gand","gaand","dalle","daale","choot","randi","rande","gend","saale","bhadv","bhadw","lavd","lawd","lund","chooch","bkl","choot","gavar","gawar","saali"]
     channel = message.channel
     embed = discord.Embed(
         colour = discord.Color.orange()
@@ -102,7 +102,8 @@ async def on_message(message):
     for i in gali2:
         i=i.upper()
         if gg.find(i)!=-1:
-            await channel.send(message.author,embed=embed)
+            await message.delete(delay=3)
+            await channel.send(name,embed=embed)
             break
 
     await client.process_commands(message)
@@ -207,9 +208,13 @@ async def me_ghissu(ctx):
     s = f"ye le code ghissu\n{url}"
     await ctx.channel.send(s)
 
-
-
-
-
+# @client.command()
+# async def book(ctx):
+#     ravi = ["ravi1.png","ravi2.png","ravi3.png","ravi4.png","ravi5.png"]
+#     sayari = ["sirf 300 me home delivery","300 me paao jhaaan ka sukh","dunga aisa chussa, thanda jayega ghussa",
+#     "bhaaiya 300 se 1₹ bhi jyada ni","300! 300! 300!","thoda arram se daalna","mehnat ki roti khata hu","300 mere khoon paseene ki kamai hai"]
+#     fp = random.choice(ravi)
+#     print(fp)
+#     await ctx.channel.send(file=discord.File(fp),content=f"*{random.choice(sayari)}*")
 
 client.run(os.environ['token'])#for heruku
