@@ -105,8 +105,14 @@ async def on_message(message):
             await message.delete(delay=3)
             await channel.send(name,embed=embed)
             break
+    msg_id  = channel.last_message
+
+    for m in channel.history(limit=10):
+        if m.id == msg_id:
+            await m.delete()
 
     await client.process_commands(message)
+    
 
 @client.command()
 async def info(ctx,handle="please_enter_handle"):
@@ -217,4 +223,6 @@ async def me_ghissu(ctx):
 #     print(fp)
 #     await ctx.channel.send(file=discord.File(fp),content=f"*{random.choice(sayari)}*")
 
-client.run(os.environ['token'])#for heruku)
+# client.run(os.environ['token'])#for heruku)
+
+client.run("NzA2NDY5MTEzOTI0NjgxNzQ5.XrL_OQ.jHMZ2LL46sRbGmIz3ou-ngWBxPM")#for heruku)
