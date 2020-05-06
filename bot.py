@@ -102,14 +102,15 @@ async def on_message(message):
     for i in gali2:
         i=i.upper()
         if gg.find(i)!=-1:
-            await message.delete(delay=3)
+            await message.delete(delay=5)
             await channel.send(name,embed=embed)
-            break
-    msg_id  = channel.last_message
+            await channel.last_message.delete(delay=10)
 
-    for m in channel.history(limit=10):
-        if m.id == msg_id:
-            await m.delete()
+            break
+
+    # for m in channel.history(limit=10):
+    #     if m.id == msg_id:
+    #         await m.delete()
 
     await client.process_commands(message)
     
