@@ -223,6 +223,4 @@ async def me_ghissu(ctx):
 #     print(fp)
 #     await ctx.channel.send(file=discord.File(fp),content=f"*{random.choice(sayari)}*")
 
-# client.run(os.environ['token'])#for heruku)
-
-client.run("NzA2NDY5MTEzOTI0NjgxNzQ5.XrL_OQ.jHMZ2LL46sRbGmIz3ou-ngWBxPM")#for heruku)
+client.run(os.environ['token'])#for heruku)
