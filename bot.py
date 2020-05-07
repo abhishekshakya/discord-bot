@@ -89,7 +89,7 @@ async def on_message(message):
     gali = ["Maderchod","Bhosadike","Bhen chod","Beti chod","bhadve","Chutiya",
     "Gaandu","lawde","landoore","choot ke bhoot","lavde ke baal","jhaat si sakal ke",
     "sadi hui gaand","randii","gend deti rend","chamak-landoore","chamkeele gaand","bhosdu-nandan"]
-    gali2 = ["BC","bsdk","chut","gand","gaand","dalle","daale","choot","randi","rande","gend","saale","bhadv","bhadw","lavd","lawd","lund","chooch","bkl","choot","gavar","gawar","saali"]
+    gali2 = ["bsdk","chut","gand","gaand","dalle","choot","randi","rande","gend","saale","bhadv","bhadw","lavd","lawd","lund","chooch","bkl","choot","gavar","gawar","saali"]
     channel = message.channel
     embed = discord.Embed(
         colour = discord.Color.orange()
