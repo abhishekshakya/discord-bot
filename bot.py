@@ -81,7 +81,7 @@ async def clear(ctx,amount=5):
 
 @client.event
 async def on_message(message):
-    if message.author.name == 'Miss_Mooooo':
+    if message.author.name == 'Miss_Mooooo' or message.author == 707218152307818507:
         return
     name = message.author.name
     test = name.split("#")
